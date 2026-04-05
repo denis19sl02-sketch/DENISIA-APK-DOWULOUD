@@ -1,0 +1,32 @@
+<button onclick="startInstantDownload()" style="
+    background: #000; 
+    color: #00BFFF; 
+    border: 3px solid #00BFFF; 
+    padding: 20px 40px; 
+    font-family: 'Arial Black', sans-serif; 
+    font-size: 18px;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px #00BFFF;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;">
+    УСТАНОВИТЬ DENISIA LAUNCHER
+</button>
+
+<script>
+function startInstantDownload() {
+    // Это прямая ссылка на скачивание файла из твоего репозитория
+    const downloadUrl = 'https://raw.githubusercontent.com/denis19sl02-sketch/DENISIA-APK-DOWULOUD/main/DENISIA%20Launcher%20(4).apk';
+
+    const anchor = document.createElement('a');
+    anchor.href = downloadUrl;
+    
+    // Этот атрибут говорит планшету: "СКАЧАЙ МЕНЯ", а не "ОТКРОЙ МЕНЯ"
+    anchor.setAttribute('download', 'DENISIA_Launcher.apk');
+    
+    // Добавляем, кликаем и удаляем
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+}
+</script>
